@@ -1,0 +1,13 @@
+POST http://localhost:4000/shop
+Content-Type: application/json
+
+{
+    "name":" TEST",
+    "price": 12899.00,
+    "description": "",
+    "category": "Computers" 
+}
+
+###
+
+DELETE http://localhost:4000/shop/62e689a103a592e0e985de7b
