@@ -1,54 +1,6 @@
 import {Container, Navbar as NavbarBS, Nav, Button} from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import { useShoppingCart } from '../context/ShoppingCartContext.tsx'
-// import React from "react";
-// import CartLogo from "../assets/shopping-cart-10985.svg"
-// import 'bootstrap/dist/css/bootstrap.min.css'
-
-
-// const NavBar = () => {
-//     return(
-//     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-//         <div className="container-fluid">
-//             <a className="navbar-brand" href="#">React Shop</a>
-//             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-//             <span className="navbar-toggler-icon"></span>
-//             </button>
-//             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-//                 <div id="btns" className="navbar-nav">
-//                     <a className="nav-link active m-auto" aria-current="page" href="#">Home</a>
-//                     <button 
-//                     style={{width: "3rem", height:"3rem", position: "relative"}}
-//                     type="button" 
-//                     className="btn btn-outline-secondary
-//                     m-1 p-0" 
-//                     href="#">
-//                         <img id="cartLogo" src={CartLogo} alt="Cart" />
-//                         {/* <div className="rounded-circle bg-danger d-flex justify-content-center align-items-center" 
-//                         style={{
-//                             color: "white", 
-//                             width:"2rem", 
-//                             height: "2rem", 
-//                             position: "absolute", 
-//                             bottom: 0, 
-//                             right:0}}
-                            
-//                             ></div> */}
-//                     </button>    
-//                 </div>
-
-//                 <form className="d-flex">
-//                     <input className="form-control me-1" type="search" placeholder="Search item" aria-label="Search"/>
-//                     <button className="btn btn-primary " type="submit">Search</button>
-//                 </form>
-//             </div>
-//         </div>
-//     </nav>
-//     )
-
-// }
-
-// export default NavBar;
 
 export default function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart()
@@ -62,6 +14,9 @@ export default function Navbar() {
           </Nav.Link>
           <Nav.Link to="/about" as={NavLink}>
             About
+          </Nav.Link>
+          <Nav.Link to="/admin" as={NavLink}>
+            Admin
           </Nav.Link>
         </Nav>
         {cartQuantity > 0 && (

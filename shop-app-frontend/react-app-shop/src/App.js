@@ -6,6 +6,7 @@ import Navbar from './components/navbar.jsx'
 import { Routes, Route} from 'react-router-dom'
 import { Container } from 'react-bootstrap' 
 import { About } from './pages/About'
+import { Admin } from './pages/Admin'
 import { ShoppingCartProvider } from './context/ShoppingCartContext.tsx'
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
       <Routes>
         <Route path="/" element={<Products/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/admin" element={<Admin/>}/>
       </Routes>
     </Container>
     </ShoppingCartProvider>
